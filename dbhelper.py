@@ -31,9 +31,9 @@ class DBHelper:
     def clear_all(self):
         connection = self.connect()
         try:
-            query = "DELET FROM crimes;"
+            query = "DELETE FROM crimes;"
             with connection.cursor() as cursor:
                 cursor.execute(query)
                 connection.commit()
-            finally:
-                connection.close()
+        finally:
+            connection.close()
