@@ -2,6 +2,7 @@ import pymysql
 import dbconfig
 
 class DBHelper:
+
     def connect(self, database="crimemap"):
         return pymysql.connect(host='localhost',
             user=dbconfig.db_user,
@@ -23,7 +24,7 @@ class DBHelper:
         try:
             query = "INSERT INTO crimes (description) VALUES ('{}');".format(data)
             with connection.cursor() as cursor:
-                connection.execute(query)
+                cursor.execute(query)
                 connection.commit()
         finally:
             connection.close()
