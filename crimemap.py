@@ -1,3 +1,5 @@
+#!/usr/bin/python2
+
 from dbhelper import DBHelper
 from flask import Flask
 from flask import render_template
@@ -34,4 +36,4 @@ def clear():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=80, debug=True)
