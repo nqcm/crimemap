@@ -50,18 +50,24 @@
         <div id="map-canvas"></div>
         <div id="newcrimeform">
             <h2>Submit new crime</h2>
+            {% if error_message %}
+                <div id="error">
+                    <p>{{error_message}}</p>
+                </div>
+            {% endif %}
             <form action="/submitcrime" method="POST">
                 <label for="category">Category</label>
                 <select id="category" name="category">
-                    <option value="mugging">Mugging</option>
-                    <option value="breakin">Break-in</option>
+                    {% for category in categories %}
+                        <option value="{{category}}">{{category}}</option>
+                    {% endfor %}
                 </select>
                 <label for="date">Date</label>
                 <input id="date" type="date" name="date">
                 <label for="latitude">Latitude</label>
-                <input id="latitude" type="text" name="latitude">
+                <input id="latitude" type="text" name="latitude" readonly>
                 <label for="longitude">Longitude</label>
-                <input id="longitude" type="text" name="longitude">
+                <input id="longitude" type="text" name="longitude" readonly>
                 <label for="description">Description</label>
                 <textarea id="description" name="description" placeholder="A bref but detailed description of the crime" rows="8" cols="80"></textarea>
                 <input type="submit" value="Submit">
