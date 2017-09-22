@@ -1,4 +1,3 @@
-#!/usr/bin/python2
 
 from flask import Flask
 from flask import render_template

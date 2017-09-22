@@ -1,3 +1,4 @@
 mockdbhelper.py
 dbconfig.py
 *.pyc
+venv/
