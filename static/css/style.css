@@ -1,6 +1,21 @@
 body {
     font-family: sans-serif;
-    background-color: #eee;
+    background: #eee;
+}
+
+#map-canvas {
+    width: 70%;
+    height: 500px;
+    float: left;
+}
+
+#newcrimeform {
+    float: right;
+    width: 25%;
+}
+
+#error {
+    color: red;
 }
 
 input, select, textarea {
@@ -15,26 +30,11 @@ input, select, textarea {
 input[type="submit"] {
     padding: 5px 10px 5px 10px;
     color: black;
-    background-color: lightsteelblue;
+    background: lightsteelblue;
     border: none;
-    box-shadow: 1px 1px 1px #4c6e91;
+    box-shadow: 1px 1px 1px #4C6E91;
 }
 
 input[type="submit"]:hover {
-    background-color: steelblue;
-}
-
-#map-canvas {
-    width: 70%;
-    height: 500px;
-    float: left;
-}
-
-#newcrimeform {
-    float: right;
-    width: 25%
-}
-
-#error {
-    color: red;
+    background: steelblue;
 }
